@@ -157,7 +157,11 @@ export class Test2 {
     switch (op) {
       case '+': result = (a + b) / factor; break;
       case '-': result = (a - b) / factor; break;
-      case '×': result = (a * b) / (factor * factor); break;
+      case '×': {
+        const a1 = BigInt(Math.round(x * factor));
+        const b1 = BigInt(Math.round(y * factor));
+        result = Number(a1 * b1 / BigInt(factor)) / factor; break;
+      }
       case '÷': 
         if (y === 0) { this.stopper = 'E'; return 0; }
         result = (a / b); break;
