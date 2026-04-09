@@ -1,0 +1,40 @@
+<h1>test2</h1>
+
+
+<div class="calculator" translate="no">
+  
+  <!-- 表示 -->
+  <div class="display">{{stopper}}{{ displayValue }}{{tenten}}</div>
+
+  <!-- ボタン -->
+  <button class="operator"></button>
+  <button (click)="addNumber('7')">7</button>
+  <button (click)="addNumber('8')">8</button>
+  <button (click)="addNumber('9')">9</button>
+  <button (click)="setOperator('÷')" class="operator">÷</button>
+
+  <button class="operator"></button>
+  <button (click)="addNumber('4')">4</button>
+  <button (click)="addNumber('5')">5</button>
+  <button (click)="addNumber('6')">6</button>
+  <button (click)="setOperator('×')" class="operator">×</button>
+
+  <button (click)="clearE()" class="clear">CE</button>
+  <button (click)="addNumber('1')">1</button>
+  <button (click)="addNumber('2')">2</button>
+  <button (click)="addNumber('3')">3</button>
+  <button (click)="setOperator('-')" class="operator">−</button>
+
+  <button (click)="clear()" class="clear">C</button>
+  <button (click)="addNumber('0')" class="zero">0</button>
+  <button (click)="addNumber('.')">.</button>
+  <button (click)="toggleNegative()">±</button>
+  <button (click)="setOperator('+')" class="operator plus">＋</button>
+
+  <button (click)="calculate()" class="equal">＝</button>
+
+
+</div>
+<p translate="no">入力：{{inputValue}}</p>
+<p translate="no">保存：{{operand1}}</p>
+<p translate="no">結果：{{result}}</p>

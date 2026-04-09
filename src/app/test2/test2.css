@@ -1,0 +1,76 @@
+
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(5, 70px);
+  gap: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.display {
+  grid-column: span 5;
+  background: rgb(173, 172, 172);
+  color: black;
+  font-size: 2rem;
+  text-align: right;
+  padding: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+button {
+  height: 70px;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #e0e0e0;
+  transition: 0.1s;
+}
+
+/* 押したとき */
+button:active {
+  transform: scale(0.95);
+  background: #ccc;
+}
+
+/* 数字 */
+button:not(.operator):not(.equal):not(.clear) {
+  background: black;
+  color: white;
+  width: 85px;
+  padding: 0 20px;
+}
+
+/* 演算子 */
+.operator {
+  background: gray;
+  color: black;
+  border-radius: 50%;
+}
+
+.plus {
+    grid-column: 5/6;
+    grid-row: 5 / 7;
+    height: 130px;
+    border-radius: 30%;
+}
+
+/* イコール */
+.equal {
+  grid-column: 2 / span 3;
+  grid-row: 6;
+  background: gray;
+  color: black;
+  border-radius: 30%;
+}
+
+/* クリア */
+.clear {
+  background: orange;
+  color: black;
+  border-radius: 50%;
+}
